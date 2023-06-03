@@ -32,7 +32,6 @@ function App() {
         <div className="circle circle2"></div>
         <div className="circle circle3"></div>
         <div className="appBg"></div>
-        <div className="asd">Hello Git</div>
   
         <div className="wrapper">
           <WeatherInfo weatherResult={weatherResult} place={place} setPlace={setPlace} setSendRequest={setSendRequest} icon={icon} setIcon={setIcon}/>
