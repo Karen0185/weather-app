@@ -25,10 +25,6 @@ function App() {
       }
     }, [sendRequest]);
 
-
-    
-    
-    
     if(weatherResult) {
     return (
       <div className="App">
