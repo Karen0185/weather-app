@@ -8,7 +8,7 @@ function App() {
   const [weatherResult, setWeatherResult] = useState();
   const [place, setPlace] = useState('');
   const [sendRequest, setSendRequest] = useState(true);
-  const [icon, setIcon] = useState()
+  const [icon, setIcon] = useState();
 
   const apiKey = '8963274cd783ab69d4c8f11b1fa611be';
   useEffect(() => {
