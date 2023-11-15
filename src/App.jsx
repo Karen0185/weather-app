@@ -20,8 +20,6 @@ function App() {
         .catch(error => console.error(error));  
         setSendRequest(false)
         setPlace('')
-
-        
       }
     }, [sendRequest]);
 
