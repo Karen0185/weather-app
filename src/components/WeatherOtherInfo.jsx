@@ -32,7 +32,7 @@ const WeatherOtherInfo = ({ weatherResult, icon, }) => {
         useEffect(() => {
             if(weatherResult) {
                 setTimeout(() => {
-                    fetch(`http://api.openweathermap.org/data/2.5/forecast?id=${weatherResult.id}&units=metric&appid=${apiKey}&lang=ru`)
+                    fetch(`https://api.openweathermap.org/data/2.5/forecast?id=${weatherResult.id}&units=metric&appid=${apiKey}&lang=ru`)
                     .then(response => response.json())
                     .then(data => setForecastResult(data))
                     .catch(error => console.log(error))
@@ -42,8 +42,8 @@ const WeatherOtherInfo = ({ weatherResult, icon, }) => {
         }, [weatherResult])
 
           let daysOfWeek = [
-              "Вт",
               "Пн",
+              "Вт",
               "Ср",
               "Чт",
               "Пт",
