@@ -8,6 +8,7 @@ import Sunrise from '../assets/images/Sunrise.svg'
 import Sunset from '../assets/images/Sunset.svg'
 import WeatherCard from './WeatherCard';
 import { useState, useEffect } from 'react';
+
 import '../assets/styles/WeatherOtherInfo.scss'
 
 const WeatherOtherInfo = ({ weatherResult, icon, }) => {
@@ -36,7 +37,6 @@ const WeatherOtherInfo = ({ weatherResult, icon, }) => {
                     .then(response => response.json())
                     .then(data => setForecastResult(data))
                     .catch(error => console.log(error))
-
                 },100)
             }
         }, [weatherResult])
@@ -178,8 +178,9 @@ const WeatherOtherInfo = ({ weatherResult, icon, }) => {
                                 item={weatherResult}
                                 />
                     {
+                        
                         afterDaysResult.map((item,idx) => {
-                            iconId = item.weather[0].icon
+                            const iconId = item.weather[0].icon
                             return(
                                 idx == 5 ? 
                                 <WeatherCard icon={iconId == '01n' || iconId == '01d' ? SunCloud : 

@@ -4,8 +4,11 @@ import SunCloud from '../assets/images/SunCloud.svg'
 import Cloud from '../assets/images/Cloud.svg'
 import CloudRain from '../assets/images/CloudRain.svg'
 import Rain from '../assets/images/Rain.svg'
+import Snow from '../assets/images/Snow.svg'
 import '../assets/styles/WeatherInfo.scss'
 import { useEffect, useState } from 'react'
+
+
 
 const WeatherInfo = ({ weatherResult, place, setPlace, setSendRequest, icon, setIcon }) => {
 
@@ -16,7 +19,8 @@ const WeatherInfo = ({ weatherResult, place, setPlace, setSendRequest, icon, set
         iconId == '01n' || iconId == '01d' ? Sun : 
         (iconId == '02n' || iconId == '02d' ? SunCloud : 
         (iconId == '09n' || iconId == '09d' ? CloudRain :
-        (iconId == '10n' || iconId == '10d' ? Rain : Cloud))
+        (iconId == '10n' || iconId == '10d' ? Rain : 
+        (iconId == '13n' || iconId == '13d' ? Snow : Cloud) ))
         )
     );
     useEffect(() => {
@@ -49,7 +53,7 @@ const WeatherInfo = ({ weatherResult, place, setPlace, setSendRequest, icon, set
       let day = currentDate.getDay();
       let russianDayOfWeek = daysOfWeek[day];
 
-    //   console.log(weatherResult);
+    //   console.log(weatherResult);     
 
     return(
         <div className="WeatherInfo">
